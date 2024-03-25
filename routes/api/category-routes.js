@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const category = await Category.findone({
+    const category = await Category.findOne({
       where: { id: req.params.id },
       include: { model: Product }
     })
